@@ -1,6 +1,9 @@
 class Solution {
 public:
     bool check(vector<int>& nums) {
+        ios_base::sync_with_stdio(false);
+        cin.tie(nullptr);
+        cout.tie(nullptr);
         int count = 0,n = nums.size();
         for(int i = 1;i<n;i++){
             if(nums[i-1]>nums[i]){
