@@ -7,8 +7,6 @@ public:
         int leftCount = 0;
         int rightCount = 0;
         stack<char> stack;
-
-        // Pass 1
         for (char ch : s) {
             if (ch == '(') {
                 leftCount++;
@@ -24,8 +22,6 @@ public:
         }
 
         string result = "";
-        
-        // Pass 2
         while (!stack.empty()) {
             char currentChar = stack.top();
             stack.pop();
@@ -35,8 +31,6 @@ public:
                 result += currentChar;
             }
         }
-
-        // Reverse the result string
         reverse(result.begin(), result.end());
         return result;
     }
